@@ -34,33 +34,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Determine base path
-        id: base_path
-        run: |
-          REPO_NAME="${{ github.event.repository.name }}"
-          echo "Repository name: $REPO_NAME"
-          if [[ "$REPO_NAME" =~ \.github\.io$ ]]; then
-            echo "base_path=/" >> $GITHUB_OUTPUT
-            echo "Using base path: /"
-          else
-            echo "base_path=/$REPO_NAME/" >> $GITHUB_OUTPUT
-            echo "Using base path: /$REPO_NAME/"
-          fi
-
       - name: Build
-        run: |
-          echo "Building with VITE_BASE_PATH: ${{ steps.base_path.outputs.base_path }}"
-          npm run build
-        env:
-          VITE_BASE_PATH: ${{ steps.base_path.outputs.base_path }}
-
-      - name: Verify build output
-        run: |
-          echo "Checking dist/index.html:"
-          cat dist/index.html | grep -o 'src="[^"]*"' || echo "No src found"
-          echo ""
-          echo "Checking dist/index.html for base path:"
-          cat dist/index.html | grep -o 'href="[^"]*"' || echo "No href found"
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
