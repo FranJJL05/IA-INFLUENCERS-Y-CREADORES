@@ -16,15 +16,9 @@ export default function Pricing() {
               Contigo
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
-            Contacta con Nosotros para una consultoría personalizada y generarte el mejor plan.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Elige el plan perfecto para tu nivel. Cambia o cancela en cualquier momento.
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300"
-          >
-            Contacta con Nosotros para Más Información
-          </a>
         </div>
 
         {/* FAQ Section */}
