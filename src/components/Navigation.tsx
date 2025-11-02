@@ -13,7 +13,6 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
     { id: 'home', label: 'Inicio' },
     { id: 'services', label: 'Servicios' },
     { id: 'features', label: 'Características' },
-    { id: 'pricing', label: 'Precios' },
   ];
 
   return (
@@ -22,7 +21,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/image.png" alt="The INFAMA Creative" className="h-12" />
+            <img src="public/image.png" alt="The INFAMA Creative" className="h-12" />
           </div>
 
           {/* Desktop Navigation */}
@@ -41,7 +40,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
               </button>
             ))}
             <button className="bg-gradient-to-r from-pink-600 to-fuchsia-500 text-white px-6 py-2.5 rounded-lg font-medium hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300">
-              Comenzar Gratis
+              Contáctanos
             </button>
           </div>
 
